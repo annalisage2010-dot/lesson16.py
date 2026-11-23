@@ -1,0 +1,26 @@
+from tkinter import*
+window = Tk()
+window.title('my profile card')
+window.geometry("400x300")
+title = Label(window, text= 'my profile card', fg='white', bg='purple', width='40' )
+title.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
+
+name_label = Label(window, text='name', fg='purple', bg='black')
+name_label.grid (row=1, column=0, padx=10, pady=5)
+name_entry = Entry(window, fg='black', bg='yellow', width=25)
+name_entry.grid (row=1, column=1, padx=10, pady=5)
+hobby_label = Label(window, text='hobby', fg='blue', bg='red')
+hobby_label.grid(row=2, column=0, padx=10, pady=5)
+hobby_entry = Entry(window, fg='orange', bg='pink', width=25)
+hobby_entry.grid (row=2, column=1, padx=10, pady=5)
+
+about_frame = Frame(window, relief='raised', borderwidth=3)
+about_frame.grid (row=3, column=0, columnspan=3, padx=10, pady=5)
+about_label = Label(about_frame, text='about me')
+about_label.pack()
+about_text = Text(about_frame,fg='green', bg='blue', height=4, width=40)
+about_text.pack()
+
+submit = Button(window, fg='yellow', bg='purple', width=20, text='show results')
+submit.grid(row=4, column=3, columnspan=2, padx=10, pady=10)
+window.mainloop()
